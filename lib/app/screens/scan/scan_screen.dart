@@ -101,6 +101,13 @@ class _ScanScreenState extends State<ScanScreen> {
                       },
                       child: Text('capturer une image'),
                     ),
+                    Text('Ma dernière facture'),
+                    last_scan_stored_result != ''
+                        ? Container()
+                        : Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Image.file(File(last_scan_stored_result))),
+                    Text('Mes factures'),
                     capturedImage == null
                         ? Container()
                         : GridView.count(
