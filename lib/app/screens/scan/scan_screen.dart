@@ -107,7 +107,7 @@ class _ScanScreenState extends State<ScanScreen> {
                       child: Text('capturer une image'),
                     ),
                     Text('Ma dernière facture'),
-                    last_scan_stored_result != ''
+                    last_scan_stored_result == ''
                         ? Container()
                         : Padding(
                             padding: const EdgeInsets.all(10),
