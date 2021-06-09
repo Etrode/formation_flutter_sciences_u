@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:my_app/app/modules/scan/data/repository/scan_repository.dart';
+import 'package:my_app/app_routes.dart';
 
 class ScanScreen extends StatefulWidget {
   @override
@@ -58,6 +59,10 @@ class _ScanScreenState extends State<ScanScreen> {
         setState(() {});
       });
     }
+  }
+
+  navigateToDetail(String imagePath) {
+    Navigator.pushNamed(context, kScanDetailsRoute, arguments: imagePath);
   }
 
   @override
